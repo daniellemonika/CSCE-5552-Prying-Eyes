@@ -58,7 +58,7 @@ green -write ./uploads/flag.png
 
 Navigate to the newly written file by going to file location within a browser:
 ```
-http:://IP:Port/uploads/flag.png
+http://IP:Port/uploads/flag.png
 ```
 
 The image that was uploaded should be shown on the flag.png page. Right-click and download this flie.
