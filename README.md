@@ -24,7 +24,7 @@ Keeping the gathered information in mind, our team began by attempting both basi
 ## Process of Capturing the Flag:
 The steps taken to capture the flag include creating the malicious PNG file, uploading the malicious file to the website, altering the POST request, and retrieving the flag from the returned image file. In order to generate the malicious PNG file, the ImageMagick Arbitrary File Disclosure (CVE-2022-44268) tool by vulhub (https://github.com/vulhub/vulhub/tree/master/imagemagick/CVE-2022-44268) was used. 
 
-Generate the malicious PNG that points to the flag.txt file within the working directory:
+Generate the malicious PNG that points to the flag.txt file within the working directory using the tool by vulhub:
 ```
 sudo python3 ./poc.py generate -o evil.png -r /home/node/app/flag.txt
 ```
@@ -73,7 +73,7 @@ Extract the metadata from the PNG file:
 exiftool -b flag.png
 ```
 
-Copy the long string hex code returned by the extraction into a hex to string calculator _(such as https://cyberchef.org/#recipe=From_Hex('Auto'))_
+Copy the long string hex code returned by the extraction into a hex to string calculator _(such as https://cyberchef.org/#recipe=From_Hex('Auto'))_ to obtain the flag.
 
 ## Risks of this Vulnerability:
 This information disclosure vulnerability can allow for unauthorized access to data and a loss of confidentiality. If a threat actor gains unauthorized access to sensitive data, it may lead to financial and reputational losses.
