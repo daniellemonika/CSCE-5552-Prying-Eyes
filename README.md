@@ -1,1 +1,1 @@
-# CSCE-5552-Prying-Eyes
+# CSCE 5552: Prying Eyes
